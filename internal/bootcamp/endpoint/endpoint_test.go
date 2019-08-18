@@ -13,7 +13,7 @@ import (
 
 func TestBlogEndpoint_GetPostsWithComments(t *testing.T) {
 	blogService := &mocks.BlogService{}
-	encodeResponse := &tmocks.EncodeResponse{}
+	encodeResponse := &tmocks.ResponseEncoder{}
 	endpoint := NewBlogEndpointImpl(blogService, encodeResponse)
 
 	writer := httptest.NewRecorder()

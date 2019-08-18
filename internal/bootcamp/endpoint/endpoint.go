@@ -13,10 +13,10 @@ type BlogEndpoint interface {
 
 type BlogEndpointImpl struct {
 	service service.BlogService
-	encoder encode.EncodeResponse
+	encoder encode.ResponseEncoder
 }
 
-func NewBlogEndpointImpl(service service.BlogService, encoder encode.EncodeResponse) *BlogEndpointImpl {
+func NewBlogEndpointImpl(service service.BlogService, encoder encode.ResponseEncoder) *BlogEndpointImpl {
 	return &BlogEndpointImpl{service: service, encoder: encoder}
 }
 

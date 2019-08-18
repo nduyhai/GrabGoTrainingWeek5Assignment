@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type EncodeResponse interface {
+type ResponseEncoder interface {
 	Encode(http.ResponseWriter, interface{}) error
 }
 
